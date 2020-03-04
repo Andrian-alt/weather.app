@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #252525;
+  font-weight: 700;
+}
+
+
+.App {
+  margin: 5vh auto;
+  width: 80vw;
+  height: 90vh;
+  background: url('./assets/main.jpg') no-repeat center;
+  background-size: cover;
+  transition: .4s ease-out;
+}
+
+
+.App.warm {
+  background: url('./assets/sunny.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.App.cold {
+  background: url('./assets/snow.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.App.rainy {
+  background: url('./assets/rainy.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.App.cloudly {
+  background: url('./assets/cloudly.jpg') no-repeat center;
+  background-size: cover;
+}
+
+main {
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+  padding: 25px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+
+}
+
+.search-bar {
+  width: 40vw;
+  height: 5vh;
+  margin-top: -25px;
+  padding-left: 20px;
+
+
+  background: none;
+  border: none;
+  outline: none;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 15px 15px;
+
+  color: #313131;
+  font-size: 15px;
+
+  transition: 0.4s ease;
+}
+
+.search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box {
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .location {
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.location-box .date {
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 50px auto 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #fff;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
