@@ -54,7 +54,7 @@ function App() {
           </div>
         </div>
         ) : (
-          <h1>Please Enter your country</h1>
+          <h1>Please enter your country</h1>
         )}
 
 
