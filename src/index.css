@@ -11,6 +11,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #252525;
   font-weight: 700;
+  background: url('./assets/mountain.png') no-repeat center;
+  background-size: cover;
+  transition: .4s ease-out;
 }
 
 
@@ -18,31 +21,11 @@ body {
   margin: 5vh auto;
   width: 80vw;
   height: 90vh;
-  background: url('./assets/main.jpg') no-repeat center;
-  background-size: cover;
   transition: .4s ease-out;
 }
 
 
-.App.warm {
-  background: url('./assets/sunny.jpg') no-repeat center;
-  background-size: cover;
-}
 
-.App.cold {
-  background: url('./assets/snow.jpg') no-repeat center;
-  background-size: cover;
-}
-
-.App.rainy {
-  background: url('./assets/rainy.jpg') no-repeat center;
-  background-size: cover;
-}
-
-.App.cloudly {
-  background: url('./assets/cloudly.jpg') no-repeat center;
-  background-size: cover;
-}
 
 main {
   height: 100%;
@@ -103,7 +86,7 @@ main {
 .weather-box .temp {
   position: relative;
   display: inline-block;
-  margin: 50px auto 30px auto;
+  margin: 30px auto;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
 
@@ -115,11 +98,13 @@ main {
 
   text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+
+
 }
 
 .weather-box .weather {
   font-size: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 
 h1 {
@@ -127,4 +112,36 @@ h1 {
   text-align: center;
   margin-top: 30px;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.image {
+  width: 30vh;
+  height: 18vh;
+  margin: auto;
+
+}
+
+.image.warm {
+  background: url('./assets/sun.svg') no-repeat center;
+
+}
+
+.image.cold {
+  background: url('./assets/snow.svg') no-repeat center;
+
+}
+
+.image.rainy {
+  background: url('./assets/rain.svg') no-repeat center;
+
+}
+
+.image.cloudly {
+  background: url('./assets/cloud.svg') no-repeat center;
+
+}
+
+.image.suncloudly {
+  background: url('./assets/suncloud.svg') no-repeat center;
+
 }

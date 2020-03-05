@@ -32,12 +32,7 @@ function App() {
     return `${day} ${date} ${month} ${year}`
   }
   return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.weather[0].main === 'Rain') ? 'App rainy'
-    :(weather.weather[0].main === 'Clear' || weather.main.temp > 16  ) ? 'App warm'
-    :(weather.main.temp <= 0 || weather.weather[0].main === 'snow'   ) ? 'App cold'
-    :(weather.weather[0].main === 'Clouds') ? 'App cloudly'
-    : 'App')
-     : 'App'}>
+    <div className="App">
       <main className="main">
         <div className="search-box">
           <input onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search} type="text" className="search-bar" placeholder="Search..."/>
@@ -50,7 +45,19 @@ function App() {
                 <div className="weather-box">
                 <div className="temp">{Math.round(weather.main.temp)}°c</div>
                 <div className="weather">{weather.weather[0].main}</div>
+                <div className={(typeof weather.main != "undefined") ? ((weather.weather[0].main === 'Rain') ? 'image rainy'
+    :(weather.weather[0].main === 'Clouds' && weather.main.temp > 16  ) ? 'image suncloudly'
+    :(weather.weather[0].main === 'Clear' || weather.main.temp > 16  ) ? 'image warm'
+    :(weather.main.temp <= 0 || weather.weather[0].main === 'snow'   ) ? 'image cold'
+    :(weather.weather[0].main === 'Clouds') ? 'image cloudly'
+    : 'image')
+     : 'image'}>
+
+
             </div>
+
+            </div>
+
           </div>
         </div>
         ) : (
